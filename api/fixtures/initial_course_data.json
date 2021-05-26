@@ -1,0 +1,26 @@
+[
+  {
+    "model": "api.course",
+    "pk": 1,
+    "fields": {
+      "name": "Computer Science",
+      "code": "CS100",
+      "books": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.course",
+    "pk": 2,
+    "fields": {
+      "name": "English Literature",
+      "code": "EL101",
+      "books": [
+        3,
+        4
+      ]
+    }
+  }
+]

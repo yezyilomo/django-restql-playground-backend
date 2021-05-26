@@ -1,0 +1,38 @@
+[
+  {
+    "model": "api.book",
+    "pk": 1,
+    "fields": {
+      "title": "Introduction to Algorithms",
+      "author": "John M. Cormen",
+      "genre": 1
+    }
+  },
+  {
+    "model": "api.book",
+    "pk": 2,
+    "fields": {
+      "title": "Algorithms and Data Structures",
+      "author": "Corner D. Martin",
+      "genre": 1
+    }
+  },
+  {
+    "model": "api.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": 2
+    }
+  },
+  {
+    "model": "api.book",
+    "pk": 4,
+    "fields": {
+      "title": "Harry Potter and the Deathly Hallows",
+      "author": "J. K. Rowling",
+      "genre": 3
+    }
+  }
+]

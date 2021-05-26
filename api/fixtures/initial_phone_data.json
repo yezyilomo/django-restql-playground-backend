@@ -1,0 +1,38 @@
+[
+  {
+    "model": "api.phone",
+    "pk": 1,
+    "fields": {
+      "number": "0927895732",
+      "type": "Home",
+      "student": 1
+    }
+  },
+  {
+    "model": "api.phone",
+    "pk": 2,
+    "fields": {
+      "number": "0783654093",
+      "type": "Mobile",
+      "student": 1
+    }
+  },
+  {
+    "model": "api.phone",
+    "pk": 3,
+    "fields": {
+      "number": "0771245638",
+      "type": "Home",
+      "student": 2
+    }
+  },
+  {
+    "model": "api.phone",
+    "pk": 4,
+    "fields": {
+      "number": "0762500881",
+      "type": "Mobile",
+      "student": 2
+    }
+  }
+]

@@ -1,0 +1,7 @@
+djangorestframework
+django-filter
+django-restql
+django-cors-headers
+django-environ
+psycopg2-binary
+uvicorn

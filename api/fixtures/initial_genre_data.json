@@ -1,0 +1,26 @@
+[
+  {
+    "model": "api.genre",
+    "pk": 1,
+    "fields": {
+      "title": "Computer Science",
+      "description": "Is a genre which involvses algorithms processes, computational machines and computation itself"
+    }
+  },
+  {
+    "model": "api.genre",
+    "pk": 2,
+    "fields": {
+      "title": "Novel",
+      "description": "A novel is a relatively long work of narrative fiction, typically written in prose and published as a book"
+    }
+  },
+  {
+    "model": "api.genre",
+    "pk": 3,
+    "fields": {
+      "title": "Fantansy",
+      "description": "Fantasy is a genre of speculative fiction set in a fictional universe, often inspired by real world myth and folklore"
+    }
+  }
+]

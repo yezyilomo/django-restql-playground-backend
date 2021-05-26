@@ -1,0 +1,20 @@
+[
+  {
+    "model": "api.student",
+    "pk": 1,
+    "fields": {
+      "name": "Morgan M. Harrison",
+      "age": 24,
+      "course": 1
+    }
+  },
+  {
+    "model": "api.student",
+    "pk": 2,
+    "fields": {
+      "name": "Jason B. Cooper",
+      "age": 23,
+      "course": 2
+    }
+  }
+]
