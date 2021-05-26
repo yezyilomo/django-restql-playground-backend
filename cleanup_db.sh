@@ -1,3 +1,6 @@
+# Go to project dir
+cd ~/django-restql-playground-backend
+
 # Flush data
 python3 manage.py flush --no-input
 
