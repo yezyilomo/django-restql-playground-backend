@@ -1,4 +1,5 @@
 from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
 
 from api.models import Genre, Phone, Book, Course, Student, Phone
 from api.serializers import (
@@ -12,6 +13,7 @@ from django_restql.mixins import EagerLoadingMixin, QueryArgumentsMixin
 class GenreViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = GenreSerializer
     queryset = Genre.objects.all().order_by('id')
+    permission_classes = (AllowAny,)
     filter_fields = {
         'title': ['exact'],
     }
@@ -20,6 +22,7 @@ class GenreViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
 class PhoneViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = PhoneSerializer
     queryset = Phone.objects.all().order_by('id')
+    permission_classes = (AllowAny,)
     filter_fields = {
         'number': ['exact'],
         'type': ['exact'],
@@ -30,6 +33,7 @@ class PhoneViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
 class BookViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = BookSerializer
     queryset = Book.objects.all().order_by('id')
+    permission_classes = (AllowAny,)
     filter_fields = {
         'title': ['exact'],
         'author': ['exact'],
@@ -42,6 +46,7 @@ class BookViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSet)
 class CourseViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = CourseSerializer
     queryset = Course.objects.all().order_by('id')
+    permission_classes = (AllowAny,)
     filter_fields = {
         'name': ['exact'],
         'code': ['exact'],
@@ -54,6 +59,7 @@ class CourseViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSe
 class StudentViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     queryset = Student.objects.all().order_by('id')
+    permission_classes = (AllowAny,)
     filter_fields = {
         'name': ['exact'],
         'age': ['exact', 'lt', 'gt'],
