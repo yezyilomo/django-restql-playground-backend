@@ -15,7 +15,7 @@ class GenreSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
 class PhoneSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
     class Meta:
         model = Phone
-        fields = ['id', 'url', 'number', 'type']
+        fields = ['id', 'url', 'number', 'type', 'student']
 
 
 class BookSerializer(DynamicFieldsMixin, NestedModelSerializer):
