@@ -13,7 +13,9 @@ class GenreViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = GenreSerializer
     queryset = Genre.objects.all().order_by('id')
     filter_fields = {
-        'title': ['exact'],
+        'id': ['exact', 'lt', 'gt'],
+        'title': ['exact', 'contains'],
+        'description': ['exact', 'contains']
     }
 
 
@@ -21,9 +23,10 @@ class PhoneViewSet(QueryArgumentsMixin, viewsets.ModelViewSet):
     serializer_class = PhoneSerializer
     queryset = Phone.objects.all().order_by('id')
     filter_fields = {
-        'number': ['exact'],
+        'id': ['exact', 'lt', 'gt'],
+        'number': ['exact', 'contains'],
         'type': ['exact'],
-        'student': ['exact'],
+        'student': ['exact', 'lt', 'gt'],
     }
 
 
@@ -31,8 +34,11 @@ class BookViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSet)
     serializer_class = BookSerializer
     queryset = Book.objects.all().order_by('id')
     filter_fields = {
-        'title': ['exact'],
-        'author': ['exact'],
+        'id': ['exact', 'lt', 'gt'],
+        'title': ['exact', 'contains'],
+        'author': ['exact', 'contains'],
+        'genre__id': ['exact', 'lt', 'gt'],
+        'genre__title': ['exact', 'contains'],
     }
     select_related = {
         "genre": "genre"
@@ -43,8 +49,9 @@ class CourseViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewSe
     serializer_class = CourseSerializer
     queryset = Course.objects.all().order_by('id')
     filter_fields = {
-        'name': ['exact'],
-        'code': ['exact'],
+        'id': ['exact', 'lt', 'gt'],
+        'name': ['exact', 'contains'],
+        'code': ['exact', 'contains'],
     }
     prefetch_related = {
         "books": "books",
@@ -55,9 +62,12 @@ class StudentViewSet(EagerLoadingMixin, QueryArgumentsMixin, viewsets.ModelViewS
     serializer_class = StudentSerializer
     queryset = Student.objects.all().order_by('id')
     filter_fields = {
-        'name': ['exact'],
+        'id': ['exact', 'lt', 'gt'],
+        'name': ['exact', 'contains'],
         'age': ['exact', 'lt', 'gt'],
-        'course__code': ['exact'],
+        'course__id': ['exact', 'lt', 'gt'],
+        'course__name': ['exact', 'contains'],
+        'course__code': ['exact', 'contains'],
     }
     select_related = {
         "course": "course"
