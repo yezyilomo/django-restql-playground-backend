@@ -1,6 +1,9 @@
 # Go to project dir
 cd ~/django-restql-playground-backend
 
+# Activate virtual environment
+source env/bin/activate
+
 # Flush data
 python3 manage.py flush --no-input
 
