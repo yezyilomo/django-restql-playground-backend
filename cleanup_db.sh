@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Go to project dir
 cd ~/django-restql-playground-backend
 
